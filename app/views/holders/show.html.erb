@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @holder.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @holder.address %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @holder.country %>
+</p>
+
+<p>
+  <b>Contact first name:</b>
+  <%= @holder.contact_first_name %>
+</p>
+
+<p>
+  <b>Contact last name:</b>
+  <%= @holder.contact_last_name %>
+</p>
+
+<p>
+  <b>Contact tel:</b>
+  <%= @holder.contact_tel %>
+</p>
+
+<p>
+  <b>Contact mail:</b>
+  <%= @holder.contact_mail %>
+</p>
+
+
+<%= link_to 'Edit', edit_holder_path(@holder) %> |
+<%= link_to 'Back', holders_path %>

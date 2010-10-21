@@ -1,0 +1,35 @@
+<h1>Listing holders</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Country</th>
+    <th>Contact first name</th>
+    <th>Contact last name</th>
+    <th>Contact tel</th>
+    <th>Contact mail</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @holders.each do |holder| %>
+  <tr>
+    <td><%= holder.name %></td>
+    <td><%= holder.address %></td>
+    <td><%= holder.country %></td>
+    <td><%= holder.contact_first_name %></td>
+    <td><%= holder.contact_last_name %></td>
+    <td><%= holder.contact_tel %></td>
+    <td><%= holder.contact_mail %></td>
+    <td><%= link_to 'Show', holder %></td>
+    <td><%= link_to 'Edit', edit_holder_path(holder) %></td>
+    <td><%= link_to 'Destroy', holder, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Holder', new_holder_path %>
